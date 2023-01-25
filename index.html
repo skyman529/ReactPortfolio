@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Movie App</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-wrapper deep-purple darken-2">
+      <a href="#!" class="brand-logo blue-text text-lighten-5"><i
+          class="black-text material-icons">movie_filter</i>The Watchlist</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="search-bar-button blue-text text-lighten-5" href="">Search Movies</a></li>
+        <li><a class="wishlist-button blue-text text-lighten-5" href="">My Watchlist</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <ul class="right sidenav blue lighten-5" id="mobile-demo">
+    <li><a class="search-bar-button-two deep-purple-text text-darken-2" href="">Search Movies</a></li>
+    <li><a class="wishlist-button-two deep-purple-text text-darken-2" href="">My Watchlist</a></li>
+  </ul>
+
+  <!-- Search Bar -->
+  <div id="search-movie-bar" class="section container">
+    <h4 class="black-text">Search for a Movie</h4>
+    <div class="nav-wrapper">
+      <form>
+        <div class="input-field">
+          <input id="search-movie-input" class="blue lighten-5 deep-purple-text text-darken-2" type="search" required>
+          <label class="label-icon" for="search"><i
+              class="search-icon material-icons blue-text text-lighten-5">search</i></label>
+          <button id="search-movie"
+            class="waves-effect waves-light btn-large deep-purple darken-2 blue-text text-lighten-5 hoverable">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Search Results -->
+  <div id="results" class="section" style="display:none">
+  <div class="container section deep-purple darken-2">
+    <div class="col s12 m7">
+      <!-- Results card -->
+      <div id="result-card" class="card horizontal small">
+        <div class="card-image">
+          <img class="Poster" src="">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <h4 class="Title header black-text"></h4>
+            <ul>
+              <li class="Released deep-purple-text text-darken-2"></li>
+              <li class="Rated deep-purple-text text-darken-2"></li>
+              <li class="Genre deep-purple-text text-darken-2"></li>
+            </ul>
+            <p class="Plot"></p>
+          </div>
+          <div class="card-action">
+            <button onclick="M.toast({html: 'added to Watchlist', classes: 'rounded'})" id="add-button" class="right-align waves-effect waves-light btn blue lighten-5 deep-purple-text text-darken-2 hoverable"><i
+                class="deep-purple-text text-darken-2 material-icons left">add</i>add to Watchlist</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="divider"></div>
+
+  <div id="upcoming" class="section deep-purple darken-2">
+    <h4 class="black-text center">Upcoming Movies to Watch</h4>
+    <!-- carousel for upcoming movies to show -->
+    <div class="carousel">
+      <div class="carousel-fixed-item center">
+        <button onclick="M.toast({html: 'added to Watchlist', classes: 'rounded'})" id="add-button" class="right-align waves-effect waves-light btn blue lighten-5 deep-purple-text text-darken-2 hoverable"><i
+          class="deep-purple-text text-darken-2 material-icons left">add</i>add to Watchlist</button>
+      </div>
+      <a class="carousel-item" href="#one!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#two!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#three!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#four!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#five!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#six!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#seven!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#eight!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#nine!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#ten!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#eleven!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#twelve!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#thirteen!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#fourteen!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#fifteen!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#sixteen!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#seventeen!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#eighteen!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#nineteen!"><img class="carousel-pic" src=""></a>
+      <a class="carousel-item" href="#twenty!"><img class="carousel-pic" src=""></a>
+    </div>
+  </div>
+
+  <!-- second page - Watchlist Page -->
+
+  <div class="section container">
+    <div id="wishlistContainer" class="col s12 m7" style="display:none">
+      <h4 class="black-text">My WatchList</h4>
+        <ul id="wishlist" class="collection" style="display:none">
+          <!-- This is where the watchlist items will be displayed -->
+          
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./assets/js/script.js"></script>
+
+</html>
