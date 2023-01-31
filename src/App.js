@@ -1,13 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/navbar';
-function App() {
+import Navbar from './components/Navbar';
+import Header from './components/Header';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+ 
+const App = () => {
   return (
-    <div className="App">
-      <Navbar/>
-      
-    </div>
-  );
+    <>
+      <Header />
+      <Nav />
+      <About />
+      <Experience />
+      <Projects />   
+      <References />  
+      <Contact />
+      <Footer /> 
+    </>
+  )
 }
 
-export default App;
+export default App
