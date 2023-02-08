@@ -1,6 +1,7 @@
 # ReactPortfolio
 
 this is my portfolio im going to continue to work on it while i look for work in the industry.
+using create react app and many youtube videos help
 
 # 20 React: React Portfolio
 
